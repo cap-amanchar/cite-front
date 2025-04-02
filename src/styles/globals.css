@@ -1,0 +1,96 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Color palette */
+    --color-bg-primary: #fffffe;
+    --color-bg-secondary: #f2f4f6;
+    --color-bg-tertiary: #e8e8e8;
+
+    --color-text-primary: #272343;
+    --color-text-secondary: #545454;
+    --color-text-tertiary: #888888;
+
+    --color-primary: #ffd803;
+    --color-secondary: #ff8e3c;
+    --color-tertiary: #0075ff;
+
+    --color-success: #00ebc7;
+    --color-warning: #ffbb00;
+    --color-danger: #ff5470;
+    --color-info: #6a7fdb;
+}
+
+@layer base {
+    html {
+        @apply font-sans text-gray-900;
+    }
+
+    body {
+        @apply bg-gray-100;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    /* Neubrutalism styles */
+
+    /* Custom border utilities */
+    .border-3 {
+        border-width: 3px;
+    }
+
+    .border-4 {
+        border-width: 4px;
+    }
+
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-200;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-500 border-2 border-gray-200;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-600;
+    }
+}
+
+/* Animation utilities */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-pop {
+    animation: pop 0.3s ease;
+}
